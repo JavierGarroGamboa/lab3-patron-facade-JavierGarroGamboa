@@ -11,5 +11,10 @@ package cr.una.lab3.facade;
  */
 public class FachadaImpresora {
 
-    
+
+    public String imprimirNormal(String texto1) {
+    }
+
+    public String imprimirDiferente(String texto2) {
+    }
 }
