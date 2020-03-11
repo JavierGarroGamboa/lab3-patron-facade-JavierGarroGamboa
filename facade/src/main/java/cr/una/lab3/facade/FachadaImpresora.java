@@ -6,15 +6,23 @@
 package cr.una.lab3.facade;
 
 /**
- *
  * @author mguzmana
  */
 public class FachadaImpresora {
 
+    ImpresoraNormal impresoraNormal;
+    ImpresoraAdicional impresoraAdicional;
 
-    public String imprimirNormal(String texto1) {
+    public FachadaImpresora() {
+        impresoraNormal = new ImpresoraNormal("PDF", "A4", true, "texto1");
+        impresoraAdicional = new ImpresoraAdicional("excel", "a3", false, "texto2");
     }
 
-    public String imprimirDiferente(String texto2) {
+    public String imprimirNormal(String texto) {
+        return impresoraNormal.imprimir(texto);
+    }
+
+    public String imprimirDiferente(String texto) {
+        return impresoraAdicional.imprimir(texto);
     }
 }

@@ -12,10 +12,21 @@ package cr.una.lab3.facade;
 public class Impresora {
     private String tipoDocumento;
     private String hoja;
+    private boolean color;
     private String texto;
 
-    public boolean isColor() {
-        return false;
+    /**
+     *
+     * @param tipoDocumento
+     * @param hoja
+     * @param color
+     * @param texto
+     */
+    public Impresora(String tipoDocumento, String hoja, boolean color, String texto) {
+        this.tipoDocumento = tipoDocumento;
+        this.hoja = hoja;
+        this.color = color;
+        this.texto = texto;
     }
 
     public String getTipoDocumento() {
@@ -34,11 +45,11 @@ public class Impresora {
         this.hoja = hoja;
     }
 
-    public String getColor() {
+    public boolean isColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(boolean color) {
         this.color = color;
     }
 
@@ -50,5 +61,8 @@ public class Impresora {
         this.texto = texto;
     }
 
-
+    @Override
+    public String toString() {
+        return "Impresora {tipoDocumento="+tipoDocumento+", hoja="+hoja+", color="+color+", texto="+texto+"}";
+    }
 }

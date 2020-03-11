@@ -6,9 +6,15 @@
 package cr.una.lab3.facade;
 
 /**
- *
  * @author mguzmana
  */
 public class ImpresoraNormal extends Impresora {
 
+    public ImpresoraNormal(String tipoDocumento, String hoja, boolean color, String texto) {
+        super(tipoDocumento, hoja, color, texto);
+    }
+
+    public String imprimir (String texto){
+        return super.toString();
+    }
 }
